@@ -96,7 +96,7 @@ PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 ########################## DIRECTORY ##########################
 alias cdash="cd /Users/yiduan34/credit-card-dashboard"
 alias cdapi="cd /Users/yiduan34/credit-card-api"
-alias cdocs="cd /Users/yiduan34/credit-card-docs"
+alias cdocs="cd /Users/yiduan34/avant-api-stubs"
 alias cdfdr="cd ~/fdr_gateway"
 
 alias cdab="cd ~/avant-basic"

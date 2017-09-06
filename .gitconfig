@@ -1,0 +1,21 @@
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	after = !git checkout master && git pull && git fetch --prune
+	pirg = push -u origin HEAD
+	s = status
+	ch = checkout
+	a = add
+	c = commit -m
+	p = push
+	fp = push -f
+	pu = pull
+	b = branch
+	rb = !git checkout master && git pull && git checkout - && git rebase master
+	chm = checkout master --
+	mb = reset --mixed HEAD~1
+        cp = cherry-pick
+[user]
+	name = yiboduan
+	email = yibo.duan@gmail.com
+[push]
+	default = simple
