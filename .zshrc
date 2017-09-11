@@ -119,7 +119,7 @@ alias dockdown="docker-compose down"
 ########################## DEV #############################
 alias repo_name='basename "$(git rev-parse --show-toplevel)"'
 alias current_branch='git rev-parse --abbrev-ref HEAD'
-alias ob='open "https://github.com/avantcredit/$repo_name/tree/$current_branch"'
+alias ob='open "https://github.com/avantcredit/$(repo_name)/tree/$(current_branch)"'
 alias bs="bin/start_development"
 alias dcss="bundle exec rake db:drop db:create db:structure:load && bundle exec rake db:seed"
 alias rake='noglob rake'
