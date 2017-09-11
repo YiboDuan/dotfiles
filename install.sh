@@ -2,8 +2,8 @@
 
 dotfiles=('zshrc' 'gitconfig')
 
-echo 'copying:'
+echo 'adding symlink:'
 for file in "${dotfiles[@]}"; do
   echo $file
-  cp .$file ~
+  ln -sf ~/dotfiles/.$file ~/.$file
 done

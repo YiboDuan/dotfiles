@@ -100,7 +100,7 @@ alias cdocs="cd /Users/yiduan34/avant-api-stubs"
 alias cdfdr="cd ~/fdr_gateway"
 
 alias cdab="cd ~/avant-basic"
-
+alias cdots="cd ~/dotfiles"
 ########################## DOCKER #############################
 if [[ "$(docker-machine status default)" == *"Running"* ]]; then
   export DOCKER_IP="$(docker-machine ip)"
@@ -117,6 +117,9 @@ alias dockup="docker-compose up -d"
 alias dockdown="docker-compose down"
 
 ########################## DEV #############################
+alias repo_name='basename "$(git rev-parse --show-toplevel)"'
+alias current_branch='git rev-parse --abbrev-ref HEAD'
+alias ob='open "https://github.com/avantcredit/$bname/tree/$current_branch"'
 alias bs="bin/start_development"
 alias dcss="bundle exec rake db:drop db:create db:structure:load && bundle exec rake db:seed"
 alias rake='noglob rake'
@@ -126,13 +129,6 @@ alias bu="bundle update --source"
 alias rr="rubocop -D && rspec"
 alias resh="source ~/.zshrc"
 alias rs="bundle exec rspec --format=documentation"
-
-# Account id
-alias aid="echo -n 13eb460d-e381-45ce-bf81-cf0bb5f0aced | pbcopy"
-# Customer id
-alias cid="echo -n b62211e7-ed36-4aa0-9f0f-c4cead7e1c1f | pbcopy"
-# Credit Card id
-alias ccid="echo -n 7a3637a5-5d49-4bed-901c-c5ed53e63228 | pbcopy"
 
 alias cov="open coverage/index.html"
 alias plink="ln -s /var/pgsql_socket/.s.PGSQL.5432 /tmp/.s.PGSQL.5432"
