@@ -30,7 +30,7 @@ next=`expr ${#components[@]} + 1`
 
 
 if [ -n "$AVANTZSH" ]; then
-  components[next]=zshellavant
+  components[next]=avant_aliases
 fi
 
 cat "${components[@]}" > "$RCNAME"
