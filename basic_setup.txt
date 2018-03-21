@@ -1,0 +1,43 @@
+INSTALL X-CODE
+xcode-select --install
+
+INSTALL BREW
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+SETTING UP SSH
+
+ssh-keygen -t rsa -b 4096 -C "yibo.duan@avant.com"
+ssh-add -K ~/.ssh/id_rsa
+
+SETTING UP RUBY
+
+brew install gpg2
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+INSTALL RAILS
+\curl -sSL https://get.rvm.io | bash -s stable --rails
+
+SUBL COMMAND LINE
+cd ~
+mkdir bin
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+echo "export PATH=$HOME/bin:/usr/local/bin:$PATH" >> .bashrc
+
+INSTALL XCODE FROM APP STORE
+AGREE TO LICENSE
+sudo xcodebuild -license
+
+INSTALL MACPORTS
+https://www.macports.org/install.php
+
+INSTALL QMAKE
+brew install qt@5.5
+brew link qt@5.5 --force
+
+INSTALL POSTGRESQL
+brew install postgresl
+
+NOW BUNDLE INSTALL!!!
