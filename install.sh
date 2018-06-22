@@ -34,7 +34,7 @@ if [ -n "$GROUPNAME" ]; then
   components[next]=$GROUPNAME
 fi
 
-echo ${components[@]}
+echo "merging profiles: ${components[@]}"
 cat "${components[@]}" > "$RCNAME"
 
 echo 'symlinking dotfiles:'
@@ -47,4 +47,4 @@ for file in `find . -name ".*" | sed 's|./||'`; do
   ln -sf "$(pwd)/$file" ~/$file
 done
 
-rm $RCNAME
+source $RCNAME
