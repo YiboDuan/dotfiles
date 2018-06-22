@@ -1,0 +1,2 @@
+export PATH=$HOME/.toolbox/bin:/apollo/env/AmazonAwsCli/bin:$PATH
+alias brazil-octane='/apollo/env/OctaneBrazilTools/bin/brazil-octane'

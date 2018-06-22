@@ -5,11 +5,12 @@ RCNAME='.bashrc'
 
 while [[ $# -gt 0 ]]
 do
-key="$1"
+  key="$1"
 
-case $key in
-    -a|--avant)
-    AVANTZSH="true"
+  case $key in
+    -g|--groupname)
+    GROUPNAME="$2"
+    shift
     shift
     ;;
     -r|--rcname)
@@ -21,18 +22,19 @@ case $key in
     POSITIONAL+=("$1") # save it in an array for later
     shift
     ;;
-esac
+  esac
 done
+
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
-components=(aliases)
+components=(base_profile)
 next=`expr ${#components[@]} + 1`
 
-
-if [ -n "$AVANTZSH" ]; then
-  components[next]=avant_aliases
+if [ -n "$GROUPNAME" ]; then
+  components[next]=$GROUPNAME
 fi
 
+echo ${components[@]}
 cat "${components[@]}" > "$RCNAME"
 
 echo 'symlinking dotfiles:'
@@ -44,3 +46,5 @@ for file in `find . -name ".*" | sed 's|./||'`; do
   echo $file
   ln -sf "$(pwd)/$file" ~/$file
 done
+
+rm $RCNAME
