@@ -3,3 +3,4 @@ complete -C /usr/local/aws/bin/aws_completer aws
 alias brazil-octane='/apollo/env/OctaneBrazilTools/bin/brazil-octane'
 alias ascend="ssh duanyibo.aka.corp.amazon.com"
 alias bw="brazil ws" 
+alias cdw="cd ~/workplace"
