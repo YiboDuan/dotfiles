@@ -1,2 +1,2 @@
 #!/bin/bash
-./install.sh -r .zshrc -g amazon
+./install.sh -r $1 -g amazon
