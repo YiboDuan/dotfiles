@@ -18,6 +18,11 @@ do
     shift
     shift
     ;;
+    -z|--zbase)
+    ZSHBASE="$2"
+    shift
+    shift
+    ;;
     *)
     POSITIONAL+=("$1") # save it in an array for later
     shift
@@ -27,13 +32,16 @@ done
 
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
-components=(base_profile)
-next=`expr ${#components[@]} + 1`
+components=()
+
+if [ -n "$ZSHBASE" ]; then
+  components+=("$ZSHBASE")
+fi
+components+=("base_profile")
 
 if [ -n "$GROUPNAME" ]; then
-  components[next]=$GROUPNAME
+  components+=("$GROUPNAME")
 fi
-
 echo "merging profiles: ${components[@]}"
 cat "${components[@]}" > "$RCNAME"
 
