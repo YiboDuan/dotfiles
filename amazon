@@ -6,3 +6,5 @@ alias bw="brazil ws"
 alias cdw="cd ~/workplace"
 alias bb="brazil-build"
 alias nds="ninja-dev-sync"
+alias br='/apollo/env/SDETools/bin/brazil-runtime-exec'
+alias brr='br rails s -b 0.0.0.0'
