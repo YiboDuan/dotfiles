@@ -16,8 +16,8 @@
         cp = cherry-pick
 	mnoff = merge --no-ff
 [user]
-	name = yiboduan
-	email = yibo.duan@gmail.com
+	name = DIAL OPERATOR
+	email = duanyibo@amazon.com
 [push]
 	default = simple
 [filter "lfs"]
