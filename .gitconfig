@@ -16,7 +16,7 @@
         cp = cherry-pick
 	mnoff = merge --no-ff
 [user]
-	name = DIAL OPERATOR
+	name = Yibo Duan
 	email = duanyibo@amazon.com
 [push]
 	default = simple
