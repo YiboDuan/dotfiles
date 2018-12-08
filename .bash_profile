@@ -1,5 +1,12 @@
+source ~/.profile
+
 ########################## DOCKER #############################
-export PATH=~/.npm-global/bin:$PATH
+if [[ "$(docker-machine status default)" == *"Running"* ]]; then
+  export DOCKER_IP="$(docker-machine ip)"
+
+  eval "$(docker-machine env default)"
+fi
+
 alias dbuild='docker build -t "$(basename $(pwd))" .'
 alias dcleani='docker rmi $(docker images | grep "^<none>" | cut -d" " -f33)'
 alias dshell='docker exec -it "$(basename $(pwd))" /bin/bash'
@@ -26,8 +33,4 @@ alias cov="open coverage/index.html"
 alias dcss="bundle exec rake db:drop db:create db:structure:load && bundle exec rake db:seed"
 alias dcms="bundle exec rake db:drop db:create db:migrate db:seed"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-export NVM_DIR="/Users/Yibo/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
