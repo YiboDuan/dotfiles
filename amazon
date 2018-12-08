@@ -1,0 +1,18 @@
+export PATH=$HOME/.toolbox/bin:/apollo/env/AmazonAwsCli/bin:/apollo/env/envImprovement/bin:$PATH
+complete -C /usr/local/aws/bin/aws_completer aws
+alias brazil-octane='/apollo/env/OctaneBrazilTools/bin/brazil-octane'
+alias ascend="ssh duanyibo.aka.corp.amazon.com"
+alias bw="brazil ws" 
+alias cdw="cd ~/workplace"
+alias bb="brazil-build"
+alias nds="ninja-dev-sync"
+alias br='/home/duanyibo/.toolbox/bin/brazil-runtime-exec'
+alias brr='br rails s -b 0.0.0.0'
+alias apenv='/apollo/bin/env'
+alias kpa='KindlePlanningApplicationsWebsite'
+alias kpoe='KindlePlanningOptimizationEngineService'
+alias dpss='DevicePlanningSolverService'
+alias dpha='DevicePlanningHorizonteApp'
+alias dups='DevicesUnitPlanService'
+alias register_with_aaa='/apollo/env/AAAWorkspaceSupport/bin/register_with_aaa.py'
+alias kpar='/apollo/bin/env -e KindlePlanningApplicationsWebsite /home/duanyibo/.toolbox/bin/brazil-runtime-exec rails'

@@ -1,0 +1,9 @@
+alias ob='open "https://github.com/avantcredit/$(repo_name)/tree/$(current_branch)"'
+alias bs="bin/start_development"
+
+alias cdab="~/avant-basic"
+alias cdapi="~/credit-card-api"
+alias cdapi="~/credit-card-api"
+alias cdash="~/card-dashboard"
+alias cdfdr="~/fdr_gateway"
+alias cdstub="~/avant-api-stubs"
