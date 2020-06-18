@@ -17,7 +17,7 @@
 	mnoff = merge --no-ff
 [user]
 	name = yiboduan
-	email = yibo.duan@gmail.com
+	email = duanyibo@amazon.com
 [push]
 	default = simple
 [filter "lfs"]

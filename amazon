@@ -16,3 +16,14 @@ alias dpha='DevicePlanningHorizonteApp'
 alias dups='DevicesUnitPlanService'
 alias register_with_aaa='/apollo/env/AAAWorkspaceSupport/bin/register_with_aaa.py'
 alias kpar='/apollo/bin/env -e KindlePlanningApplicationsWebsite /home/duanyibo/.toolbox/bin/brazil-runtime-exec rails'
+alias dpssenv='/apollo/bin/env -e DevicePlanningSolverService'
+alias mosel=' /apollo/env/DevicePlanningSolverService/bin/mosel'
+alias optimizer=' /apollo/env/DevicePlanningSolverService/bin/optimizer'
+alias mos='dpssenv mosel'
+export XPRESS='/apollo/env/DevicePlanningSolverService'
+alias bpvenv='source `brazil-bootstrap --environmentType=test-runtime`/bin/activate'
+export PATH=$HOME/.pyenv/bin:$PATH
+eval "$(pyenv init -)"
+export BRAZIL_CLI_BIN='/home/duanyibo/.toolbox/bin'
+alias sam="brazil-build-tool-exec sam"
+alias edx="/apollo/env/EDXClient/bin/edx"
