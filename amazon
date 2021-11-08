@@ -1,5 +1,55 @@
-export PATH=$HOME/.toolbox/bin:/apollo/env/AmazonAwsCli/bin:/apollo/env/envImprovement/bin:$PATH
-complete -C /usr/local/aws/bin/aws_completer aws
+## cloud desk default lines ##
+
+source /apollo/env/envImprovement/var/zshrc
+
+export BRAZIL_WORKSPACE_DEFAULT_LAYOUT=short
+
+for f in SDETools envImprovement AmazonAwsCli OdinTools; do
+    if [[ -d /apollo/env/$f ]]; then
+        export PATH=$PATH:/apollo/env/$f/bin
+    fi
+done
+
+export AUTO_TITLE_SCREENS="NO"
+
+export PROMPT="
+%{$fg[white]%}(%D %*) <%?> [%~] $program %{$fg[default]%}
+%{$fg[cyan]%}%m %#%{$fg[default]%} "
+
+export RPROMPT=
+
+set-title() {
+    echo -e "\e]0;$*\007"
+}
+
+ssh() {
+    set-title $*;
+    /usr/bin/ssh -2 $*;
+    set-title $HOST;
+}
+
+alias e=emacs
+alias bb=brazil-build
+
+alias bba='brazil-build apollo-pkg'
+alias bre='brazil-runtime-exec'
+alias brc='brazil-recursive-cmd'
+alias bws='brazil ws'
+alias bwsuse='bws use --gitMode -p'
+alias bwscreate='bws create -n'
+alias brc=brazil-recursive-cmd
+alias bbr='brc brazil-build'
+alias bball='brc --allPackages'
+alias bbb='brc --allPackages brazil-build'
+alias bbra='bbr apollo-pkg'
+
+if [ -f ~/.zshrc-dev-dsk-post ]; then
+    source ~/.zshrc-dev-dsk-post
+fi
+
+export PATH=$HOME/.toolbox/bin:$PATH
+
+##############################
 alias brazil-octane='/apollo/env/OctaneBrazilTools/bin/brazil-octane'
 alias ascend="ssh duanyibo.aka.corp.amazon.com"
 alias bw="brazil ws" 
@@ -27,3 +77,4 @@ eval "$(pyenv init -)"
 export BRAZIL_CLI_BIN='/home/duanyibo/.toolbox/bin'
 alias sam="brazil-build-tool-exec sam"
 alias edx="/apollo/env/EDXClient/bin/edx"
+alias adac="ada credentials update --account=900953259750 --provider=conduit --role=\"admin\""

@@ -15,6 +15,7 @@
 	mb = reset --mixed HEAD~1
         cp = cherry-pick
 	mnoff = merge --no-ff
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 [user]
 	name = yiboduan
 	email = duanyibo@amazon.com
@@ -25,3 +26,8 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[color]
+	ui = auto
+[core]
+	pager = less -FMRiX
+	excludesfile = /home/duanyibo/.config/git/excludes
