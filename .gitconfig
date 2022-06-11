@@ -1,6 +1,6 @@
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	after = !git checkout mainline && git pull && git fetch --prune
+	after = !git checkout main && git pull && git fetch --prune
 	pirg = push -u origin HEAD
 	s = status
 	ch = checkout
@@ -10,15 +10,15 @@
 	fp = push -f
 	pu = pull
 	b = branch
-	rb = !git checkout mainline && git pull && git checkout - && git rebase mainline
-	chm = checkout mainline --
+	rb = !git checkout main && git pull && git checkout - && git rebase main
+	chm = checkout main --
 	mb = reset --mixed HEAD~1
         cp = cherry-pick
 	mnoff = merge --no-ff
 	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 [user]
 	name = yiboduan
-	email = duanyibo@amazon.com
+	email = yibo.duan@gmail.com
 [push]
 	default = simple
 [filter "lfs"]
